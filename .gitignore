@@ -1,2 +1,4 @@
 baseapp.js
 node_modules
+.env
+docker-compose.yaml
