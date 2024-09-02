@@ -4,6 +4,8 @@ Este é um projeto de exemplo para demonstrar como criar um sistema de login e r
 
 ## 🛠 Como instalar e executar o projeto
 
+### Local
+
 1) 👨🏾‍🤝‍👨🏾 Clone este repositório em seu computador:
 
 ``` git clone https://github.com/seu-usuario/nome-do-repositorio.git ```
@@ -30,6 +32,20 @@ obs: Copiei isso de um tutorial de Linux
 
 Se nada explodir ja é possivel acessar as funcionalidades da aplicação. 
 
+### Docker
+
+1) 👨🏾‍🤝‍👨🏾 Clone este repositório em seu computador:
+
+``` git clone https://github.com/seu-usuario/nome-do-repositorio.git ```
+
+2) 🐳 Build a aplicação usando docker:
+
+``` docker build -t app-login-registro-nodejs -f Dockerfile . ```
+
+3)  🐳 Execute a linha abaixo para rodar a aplicação, e não esqueça de configurar no arquivo ``.env`` com os dados de conexão do seu banco de dados:
+
+``` docker run -d --env-file=.env -p3000:3000: app-login-registro-nodejs ```
+
 ## 📖 Como usar o projeto
 ### ✍🏿 Cadastro de Usuários
 Para criar uma nova conta de usuário, clique em "Register" na página inicial. Preencha o formulário de registro com um nome de usuário, um endereço de e-mail e uma senha. Depois de enviar o formulário, você será redirecionado para a página de login.( Ou pelo menos deveria )
@@ -41,7 +57,7 @@ Para fazer login em uma conta existente, clique em "Login" na página inicial. P
 Arquivos e Diretórios Principais
 O projeto consiste nos seguintes arquivos e diretórios principais:
 
-**server.js**: o arquivo principal do servidor.
+**index.js**: o arquivo principal do servidor.
 
 **config/mongoConnection.js**: o arquivo que define a conexão do Mongoose com o banco de dados MongoDB.
 
